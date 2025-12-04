@@ -6,9 +6,6 @@ This DAG demonstrates a simple ETL pipeline:
 2.  **Transform & Load (to CSV):** Saves the fetched data into a CSV file in a temporary location.
 3.  **Distribute:** Sends the CSV file as an email attachment using a direct SMTP connection defined in the code.
 
-**WARNING:** This method includes database and SMTP credentials directly in the code.
-This is NOT a recommended security practice for production environments.
-Use Airflow Connections for better security and management.
 """
 from __future__ import annotations
 
@@ -190,4 +187,5 @@ def mysql_to_csv_and_email_dag():
 
 
 # Instantiate the DAG
+
 mysql_to_csv_and_email_dag()
